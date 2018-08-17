@@ -1,11 +1,13 @@
 @import "base/fonts";
 
 /*Sizes*/
-$padding-lg: 80px;
-$padding-md: 40px;
+$padding-hg: 80px;
+$padding-lg: 40px;
+$padding-md: 30px;
 $padding-sm: 20px;
 $padding-xs: 10px;
 $general-font: 17px;
+$big-font: 30px;
 
 /*Colors*/
 $gray: #b6b6b6;
@@ -27,9 +29,9 @@ body{
 .container{
   background-color: #fff;
   width: 940px;
-  margin: -$padding-lg auto 0;
+  margin: -$padding-hg auto 0;
   position: relative;
-  padding-bottom: $padding-md;
+  padding-bottom: $padding-lg;
   @media all and (max-width: 940px) {
     width: 100%;
   }
@@ -61,14 +63,14 @@ body{
     }
   }
   &-content{
-    padding: $padding-sm $padding-lg;
+    padding: $padding-sm $padding-hg;
 
     &__title{
       display: block;
       & h1{
         margin: 0;
         font-family: $stag-semibold;
-        font-size: 30px;
+        font-size: $big-font;
         padding: $padding-sm 0 $padding-xs;
         position: relative;
         border-bottom: 2px solid $light-gray;
@@ -93,15 +95,15 @@ body{
       font-size: $general-font;
       line-height: 25px;
       margin: 0;
-      padding: $padding-sm 0;
+      padding: 12px 0;
     }
     &__img{
-      width: 356px;
+      width: 375px;
       height: auto;
       margin-right: $padding-sm;
       border: 5px solid #f2f2f2;
       float: left;
-      margin-left: calc(-#{$padding-lg} - 5px );
+      margin-left: calc(-#{$padding-hg} - 5px );
       box-sizing: border-box;
     }
   }
@@ -109,6 +111,7 @@ body{
     padding: $padding-sm 0;
     border-top: 2px solid $gray;
     border-bottom: 2px solid $gray;
+    margin-top: $padding-xs;
     &__item{
       display: inline-block;
       color: $gray;
@@ -125,13 +128,13 @@ body{
   }
   &-comments{
     &__personal{
-
+      border-bottom: 2px solid $light-gray;
     }
     &__title{
       margin: 0;
       font-family: $stag-medium;
-      font-size: 30px;
-      padding: $padding-md 0;
+      font-size: $big-font;
+      padding: $padding-md 0 $padding-lg;
       position: relative;
     }
     &__textarea{
@@ -152,17 +155,20 @@ body{
       }
     }
     &__list{
-
+      padding-top: $padding-lg;
     }
     &__item{
-      margin-bottom: $padding-md;
+      margin-bottom: $padding-lg;
+      &:last-child{
+        margin-bottom: 0;
+      }
       &:after{
         content: '';
         clear: both;
         display: table;
       }
       .post-comments__children &{
-        margin-bottom: 30px;
+        margin-bottom: $padding-md;
       }
       & .post-comments__info{
         float: none;
@@ -283,7 +289,7 @@ body{
 
       & .post-comments__item{
         &:first-child{
-          margin-top: 30px;
+          margin-top: $padding-sm;
         }
         &:last-child{
           margin-bottom: 0;
@@ -295,13 +301,14 @@ body{
       position: relative;
       text-align: center;
       overflow: hidden;
+      margin-top: $padding-md;
       &_btn{
         position: relative;
         display: inline-block;
         font-size: $general-font;
         color: $light-gray;
         border: 2px solid $light-gray;
-        padding: $padding-xs $padding-sm;
+        padding: $padding-xs;
         &:hover{
           cursor: pointer;
         }
@@ -327,7 +334,7 @@ body{
   & .form{
     .post-comments__personal{
       border-bottom: 2px solid $light-gray;
-      margin-bottom: $padding-md;
+      margin-bottom: $padding-lg;
     }
     &-block{
       position: relative;
@@ -369,13 +376,13 @@ body{
     }
     &-comments{
       &__children{
-        padding-left: $padding-md;
+        padding-left: $padding-lg;
       }
     }
   }
   @media all and (max-width: 768px){
     &-content{
-      padding: $padding-sm $padding-md;
+      padding: $padding-sm $padding-lg;
       &__title{
         & h1{
           &:before{
