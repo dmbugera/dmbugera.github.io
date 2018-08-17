@@ -101,8 +101,8 @@ body{
       margin-right: $padding-sm;
       border: 5px solid #f2f2f2;
       float: left;
-      margin-left: -$padding-lg;
-      border-left: none;
+      margin-left: calc(-#{$padding-lg} - 5px );
+      box-sizing: border-box;
     }
   }
   &-info{
@@ -407,7 +407,7 @@ body{
       }
     }
     &-content{
-      padding: $padding-sm $padding-xs;
+      padding: $padding-xs;
       &__img{
         margin-bottom: $padding-sm;
         float: none;
@@ -415,6 +415,7 @@ body{
       }
       & p{
         padding: $padding-xs 0;
+        font-size: 15px;
       }
       &__title{
         & h1{

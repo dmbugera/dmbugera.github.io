@@ -17,6 +17,7 @@ jQuery.each( [ "put", "delete" ], function( i, method ) {
 });
 
 $(function () {
+
     var currentUser = 1,
         email = 'test@email.com',
         setDate = function (item) {
@@ -63,7 +64,6 @@ $(function () {
                 $('.post-comments__personal').attr('data-user', currentUser);
             }
 
-            // console.log(author);
             var parent = messageList;
             var replyBlock;
             if( author.id == currentUser ){
@@ -151,6 +151,7 @@ $(function () {
         });
     }
 
+    //Get comments list
     getList(messagesNumber, messagesOffset);
 
 
@@ -404,7 +405,7 @@ $(function () {
         });
 
 
-    })
+    });
 
     //comments number
 
@@ -432,7 +433,5 @@ $(function () {
     }
 
     getCommentsNumber();
-
-
 
     });
